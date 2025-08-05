@@ -6,14 +6,14 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Premium Gym - Salle de Sport à Bab Ezzouar",
   description:
-    "Salle de sport moderne à Bab Ezzouar avec équipements de pointe, coaching personnalisé et horaires flexibles. Rejoignez Premium Gym pour transformer votre corps.",
+    "Salle de sport moderne à Bab Ezzouar avec équipements de pointe, coaching personnalisé et horaires flexibles. Fitness, Crossfit, Kickboxing, Stretching et Lutte.",
   keywords:
-    "salle de sport, gym, fitness, musculation, Bab Ezzouar, Alger, coaching, premium",
+    "salle de sport, gym, fitness, musculation, Bab Ezzouar, Alger, coaching, premium, crossfit, kickboxing, lutte, stretching",
   authors: [{ name: "Premium Gym" }],
   openGraph: {
     title: "Premium Gym - Salle de Sport à Bab Ezzouar",
     description:
-      "Transformez votre corps avec nos équipements de pointe et notre coaching personnalisé",
+      "Transformez votre corps avec nos équipements de pointe, nos cours collectifs variés et notre coaching personnalisé",
     url: "https://premiumgym-babezzouar.com",
     siteName: "Premium Gym",
     images: [
@@ -30,7 +30,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Premium Gym - Salle de Sport à Bab Ezzouar",
-    description: "Salle de sport moderne avec équipements de pointe",
+    description: "Salle de sport moderne avec équipements de pointe et cours collectifs variés",
     images: ["/images/og-image.jpg"],
   },
   robots: {
@@ -53,6 +53,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#fbbf24" />
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
