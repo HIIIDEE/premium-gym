@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Users, Dumbbell, Calendar, Star } from "lucide-react";
+import { Users, Dumbbell, Calendar, Star, Heart, Zap, Target, Trophy } from "lucide-react";
 import { ScrollAnimationWrapper } from "../../hooks/useScrollAnimation";
 import { scheduleData, collectiveClasses } from "../../data";
 
@@ -91,15 +91,26 @@ const Planning: React.FC = () => {
           <div className="bg-gradient-to-r from-yellow-400/10 to-orange-500/10 p-6 rounded-2xl border border-yellow-400/30 mb-6">
             <h3 className="text-xl font-bold text-yellow-400 mb-4">Cours Collectifs Disponibles</h3>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm">
-              {collectiveClasses.map((classItem, index) => (
-                <span
-                  key={index}
-                  className={`${classItem.color} px-3 py-2 rounded-full flex items-center justify-center`}
-                >
-                  <classItem.icon className="w-4 h-4 mr-1" />
-                  {classItem.name}
-                </span>
-              ))}
+              <span className="bg-pink-500/20 px-3 py-2 rounded-full text-pink-300 flex items-center justify-center">
+                <Heart className="w-4 h-4 mr-1" />
+                Fitness
+              </span>
+              <span className="bg-blue-500/20 px-3 py-2 rounded-full text-blue-300 flex items-center justify-center">
+                <Zap className="w-4 h-4 mr-1" />
+                Crossfit
+              </span>
+              <span className="bg-green-500/20 px-3 py-2 rounded-full text-green-300 flex items-center justify-center">
+                <Target className="w-4 h-4 mr-1" />
+                Kickboxing
+              </span>
+              <span className="bg-purple-500/20 px-3 py-2 rounded-full text-purple-300 flex items-center justify-center">
+                <Users className="w-4 h-4 mr-1" />
+                Stretching
+              </span>
+              <span className="bg-red-500/20 px-3 py-2 rounded-full text-red-300 flex items-center justify-center">
+                <Trophy className="w-4 h-4 mr-1" />
+                Lutte
+              </span>
             </div>
           </div>
           <div className="bg-gray-800/50 p-4 rounded-xl mb-6">
