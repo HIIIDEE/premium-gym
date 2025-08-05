@@ -1,12 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
-import { Trophy, Play, Shield, Heart, Award, ChevronDown } from "lucide-react";
+import React from "react";
+import { Trophy, Shield, Heart, Award, ChevronDown } from "lucide-react";
 import TypewriterText from "../ui/TypewriterText";
-import VideoModal from "../ui/VideoModal";
 
 const Hero: React.FC = () => {
-  const [showVideoModal, setShowVideoModal] = useState(false);
 
   return (
     <>
@@ -49,17 +47,13 @@ const Hero: React.FC = () => {
             pour atteindre vos objectifs fitness
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up delay-1000">
-            <button className="bg-gradient-to-r from-yellow-400 to-orange-500 px-8 py-4 rounded-full font-bold text-gray-900 text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 animate-gradient-shift">
-              Commencer Maintenant
-            </button>
-            <button 
-              onClick={() => setShowVideoModal(true)}
-              className="border-2 border-yellow-400 px-8 py-4 rounded-full font-bold text-yellow-400 text-lg hover:bg-yellow-400 hover:text-gray-900 transition-all duration-300 interactive-element flex items-center space-x-2"
+          <div className="flex justify-center animate-fade-in-up delay-1000">
+            <a 
+              href="#tarifs"
+              className="bg-gradient-to-r from-yellow-400 to-orange-500 px-8 py-4 rounded-full font-bold text-gray-900 text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 animate-gradient-shift"
             >
-              <Play className="w-5 h-5" />
-              <span>Voir la vidéo</span>
-            </button>
+              Commencer Maintenant
+            </a>
           </div>
 
           <div className="mt-16 flex flex-wrap justify-center items-center gap-8 opacity-70">
@@ -106,8 +100,6 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </section>
-
-      <VideoModal isOpen={showVideoModal} onClose={() => setShowVideoModal(false)} />
     </>
   );
 };
